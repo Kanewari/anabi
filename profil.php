@@ -33,6 +33,7 @@
 <html>
 <head>
     <?php include('head.php');?>
+    <link rel="stylesheet" href="css.css" />
     <title><?php echo $_SESSION['pseudo']; ?></title>
 </head>
 <body>
@@ -42,77 +43,32 @@
             $requete_miniature -> execute(array($_SESSION['id']));
             $miniature = $requete_miniature -> fetch();
         ?>
-        <div style="margin-left: 25vw; margin-top: 1vw;">
-            <div style="
-            background: url(miniatures/<?php echo $miniature['miniature']; ?>) no-repeat;
-            background-size: 50vw;
-            width: 50vw;
-            height: 20vw;
-            border-radius: 1vw 1vw 0vw 0vw;
-            "></div>
-                            <div style="
-                            display: flex;
-                            justify-content: center;
-                            width: 50vw;
-                            height: 8vw;
-                            background-color: rgba(0,0,0,0.8);
-                            border-radius: 0vw 0vw 1vw 1vw;
-                            ">
+        <div class="div1profil">
+            <div class="div2profil"></div>
+                            <div class="div3profil">
                             
-                                <img src="<?php echo $_avatar; ?>" style="
-                                width: 10vw; 
-                                height: 10vw;
-                                border: 0.1vw solid white;
-                                margin-top: -5vw;
-                                margin-left: -24%;
-                                border-radius: 50%;
-                                ">
+                                <img src="<?php echo $_avatar; ?>" class="img1profil">
                             </form>
-                                <span style="
-                                font-family: arial;
-                                font-size: 1.3vw;
-                                margin-top: -4.2vw;
-                                ">
+                                <span class="span1profil">
                                <table>
                                     <tr>
-                                        <td style="color: white; font-family: Arial; font-size: 2vw;">
+                                        <td class="td1profil">
                                             <?php echo $_SESSION['pseudo'];?>
                                             </span>
                                         </td>
                                         <td>
                                         <form method="POST">
-                                    <input name="edition" type="submit" style="
-                                    height: 1.5vw;
-                                    font-size: 0.8vw;
-                                    position: relative;
-                                    margin-left: -4vw;
-                                    border: 0.05vw solid rgba(0,0,0,0.2);
-                                    box-shadow: 0.1vw 0.1vw 0.2vw black;
-                                    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
-                                    background-color: rgba(0,0,0,0.5);
-                                    color: white;
-                                    font-family: Arial;
-                                    cursor: pointer;
-                                    " value="Modifier le profil">
+                                    <input name="edition" type="submit" class="input1profil" value="Modifier le profil">
                                 </form>
                                 </td>
                                     </tr>
                                     <tr>
                                         <td><br>
-                                        <span style="
-                                        font-size: 0.8vw; 
-                                        color: white;
-                                        font-family: Arial;
-                                        ">
-                                            <?php echo 'Niveau <span style="font-weight: bold;">'.$lvl['lvl'].'</span>'; ?>
+                                        <span class="span2profil">
+                                            <?php echo 'Niveau <span class="gras">'.$lvl['lvl'].'</span>'; ?>
                                             </span>
-                                        <span style="
-                                        color: black;
-                                        font-size: 0.8vw;
-                                        margin-left: 1vw;
-                                        font-family: Arial;
-                                        ">
-                                                <?php echo '<span style="font-weight: bold;"><a href="amis.php?id='.$_SESSION['id'].'&pseudo='.$_SESSION['pseudo'].'"></span><span style="color: white"><b>'.$nb_amis.'</b>'.$_amis.'</span></a>'; ?>
+                                        <span class="span3profil">
+                                                <?php echo '<span class="gras"><a href="amis.php?id='.$_SESSION['id'].'&pseudo='.$_SESSION['pseudo'].'"></span><span class="white"><b>'.$nb_amis.'</b>'.$_amis.'</span></a>'; ?>
                                             </span>
                                         </td>
                                         </tr>
@@ -122,11 +78,7 @@
                                                 $requete_bio = $bdd -> prepare('SELECT * FROM membres WHERE id = ?');
                                                 $requete_bio -> execute(array($_SESSION['id']));
                                                 $bio = $requete_bio -> fetch();
-                                                echo '<p style="
-                                                color: white;
-                                                font-family: bello;
-                                                font-size: 0.6vw; 
-                                                ">'.$bio['bio'].'</p>';
+                                                echo '<p class="p1profil">'.$bio['bio'].'</p>';
                                             ?>
                                         </td>
                                     </tr>
