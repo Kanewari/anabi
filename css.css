@@ -197,3 +197,87 @@ ul
 {
     border: 1px solid rgba(102, 0, 255, 1);
 }
+.div1profil
+{
+    margin-left: 25vw;
+    margin-top: 1vw;
+}
+.div2profil
+{
+    background: url(miniatures/<?php echo $miniature['miniature']; ?>) no-repeat;
+    background-size: 50vw;
+    width: 50vw;
+    height: 20vw;
+    border-radius: 1vw 1vw 0vw 0vw;
+}
+.div3profil
+{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    height: 8vw;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 0vw 0vw 1vw 1vw;
+}
+.img1profil
+{
+    width: 10vw; 
+    height: 10vw;
+    border: 0.1vw solid white;
+    margin-top: -5vw;
+    margin-left: -24%;
+    border-radius: 50%;
+}
+.span1profil
+{
+    font-family: arial;
+    font-size: 1.3vw;
+    margin-top: -4.2vw;
+}
+.td1profil
+{
+    color: white;
+    font-family: Arial;
+    font-size: 2vw;
+}
+.input1profil
+{
+    height: 1.5vw;
+    font-size: 0.8vw;
+    position: relative;
+    margin-left: -4vw;
+    border: 0.05vw solid rgba(0,0,0,0.2);
+    box-shadow: 0.1vw 0.1vw 0.2vw black;
+    border-radius: 0.2vw 0.2vw 0.2vw 0.2vw;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-family: Arial;
+    cursor: pointer;
+}
+.span2profil
+{
+    font-size: 0.8vw;
+    color: white;
+    font-family: Arial;
+}
+.gras
+{
+    font-weight: bold;
+}
+.span3profil
+{
+    color: black;
+    font-size: 0.8vw;
+    margin-left: 1vw;
+    font-family: Arial;
+}
+.white
+{
+    color: white;
+}
+.p1profil
+{
+    color: white;
+    font-family: bello;
+    font-size: 0.6vw;
+}
